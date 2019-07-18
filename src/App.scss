@@ -1,0 +1,22 @@
+.App {
+  .not-supported {
+    display: none;
+  }
+  #page-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 220px) {
+  .App {
+    .not-supported {
+      display: flex;
+    }
+
+    #page-root {
+      display: none;
+    }
+  }
+}
