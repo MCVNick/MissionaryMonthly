@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import Header from './components/Header/Header';
-import Navbar from './components/Navbar/Navbar'
+import RouteNavbar from './components/RouteNavbar/RouteNavbar'
+import UserNavbar from './components/UserNavbar/UserNavbar'
 import routes from './routes';
 
 import conf from './conf'
@@ -21,8 +22,9 @@ function App() {
       </p>
       <Router>
         <div id='page-root'>
+          <UserNavbar />
           <Header name={name}/>
-          <Navbar tabs={tabs}/>
+          <RouteNavbar tabs={tabs}/>
           {routes}
         </div>
       </Router>

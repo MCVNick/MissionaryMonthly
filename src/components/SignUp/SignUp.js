@@ -5,7 +5,8 @@ import './SignUp.scss'
 const SignUp = () => {
     return (
         <div id='fixed-home-sign-up'>
-            <p>Sign Up!</p>
+            <p>Register</p>
+            <p>Login</p>
         </div>
     )
 }
