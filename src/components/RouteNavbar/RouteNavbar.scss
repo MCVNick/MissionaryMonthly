@@ -1,13 +1,13 @@
 #route-navbar-tabs {
     display: flex;
     flex-direction: row;
-
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 16px;
+    border-bottom: 1px solid black;
+    
     p {
-        margin: 6px;
-    }
-
-    img {
-        width: 16px;
-        height: 16px;
+        font-size: 20px;
+        padding: 16px;
     }
 }

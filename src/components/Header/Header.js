@@ -4,7 +4,7 @@ import './Header.scss'
 
 const Header = (props) => {
     return (
-        <div id='page-header'>{props.name}</div>
+        <h1 id='page-header'>{props.name}</h1>
     )
 }
 

@@ -5,7 +5,6 @@ export default {
         'Shop',
         'About Us',
         'Contact',
-        'More',
-        'Cart'
+        'More'
     ]
 }

@@ -1,0 +1,25 @@
+#user-navbar-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 8px;
+    
+    img {
+        width: 32px;
+    }
+
+    .user-navbar-social-button-last {
+        margin-right: 16px;
+    }
+
+    .user-navbar-cart-icon {
+        margin-left: 8px;
+    }
+
+    .user-navbar-words {
+        font-size: 16px;
+        padding: 8px;
+        font-weight: bold;
+    }
+}

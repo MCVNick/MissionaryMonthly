@@ -1,15 +1,35 @@
 require('dotenv').config()
-// const { GMAIL_USER, GMAIL_PASSWORD } = process.env
+const { SESSION_SECRET, SERVER_PORT } = process.env
 const express = require('express');
 const { json } = require('express')
 // const nodemailer = require('nodemailer')
 const expressStaticGzip = require('express-static-gzip')
-// const sm = require('sitemap')
+const sm = require('sitemap')
 // const fs = require('fs')
+const session = require('express-session')
 
 const app = express();
 const path = require('path')
-app.use(express.static(`${__dirname}/../build`))
+const sitemap = sm.createSitemap ({
+  hostname: 'https://missionarymonthly.com',
+  cacheTime: 31536000,
+  urls: [
+    { url: '/',  changefreq: 'daily', priority: 1.0 },
+    { url: '/Home',  changefreq: 'daily', priority: 0.5 },
+    { url: '/Shop',  changefreq: 'daily',  priority: 0.9 },
+    { url: '/About Us',  changefreq: 'daily', priority: 0.6 },
+    { url: '/Contact',  changefreq: 'daily', priority: 0.8 },
+    { url: '/More',  changefreq: 'daily', priority: 0.7 },
+    { url: '/Login',  changefreq: 'daily', priority: 0.6 },
+    { url: '/Register',  changefreq: 'daily', priority: 0.7 }
+  ]
+});
+app.use(express.static(`${__dirname}/../build`));
+app.use(session({
+  secret: SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+}));
 app.use(`/build/client`, expressStaticGzip(`/build/client`, {
   enableBrotli: true,
   customCompressions: [{
@@ -20,8 +40,18 @@ app.use(`/build/client`, expressStaticGzip(`/build/client`, {
 }));
 app.use(json())
 
-const port = 4333
+const port = SERVER_PORT || 4333
 app.listen(port, console.log('The server is running on port', port))
+
+app.get('/sitemap.xml', function(req, res) {
+  sitemap.toXML( function (err, xml) {
+      if (err) {
+        return res.status(500).end();
+      }
+      res.header('Content-Type', 'application/xml');
+      res.send( xml );
+  });
+});
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../build/index.html'))
