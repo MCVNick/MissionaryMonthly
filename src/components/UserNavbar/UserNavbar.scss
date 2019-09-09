@@ -19,7 +19,12 @@
 
     .user-navbar-words {
         font-size: 16px;
-        padding: 8px;
-        font-weight: bold;
+        padding: 4px 8px;
+    }
+
+    button {
+        background-color: #84B3FF;
+        border-radius: 8px;
+        border: 1px solid rgb(107, 159, 243)
     }
 }
