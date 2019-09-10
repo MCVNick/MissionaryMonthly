@@ -5,7 +5,7 @@ import './Home.scss'
 
 const Home = () => {
     return (
-        <main className='home-page'>
+        <main id='home-page'>
             <Carousel />
 
             <p>You need to decide what you want this to say here, and decide what goes in the carousel.</p>

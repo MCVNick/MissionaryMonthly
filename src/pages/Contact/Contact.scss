@@ -1,0 +1,24 @@
+#contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 85%;
+
+    .contact-header {
+        margin-bottom: 32px;
+    }
+
+    .contact-section-divide {
+        margin: 8px 0;
+    }
+
+    section {
+        margin-bottom: 32px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+}

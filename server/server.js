@@ -1,8 +1,8 @@
 require('dotenv').config()
-const { SESSION_SECRET, SERVER_PORT } = process.env
+const { SESSION_SECRET, SERVER_PORT, GMAIL_USER, GMAIL_PASSWORD } = process.env
 const express = require('express');
 const { json } = require('express')
-// const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer')
 const expressStaticGzip = require('express-static-gzip')
 const sm = require('sitemap')
 // const fs = require('fs')
@@ -42,6 +42,43 @@ app.use(json())
 
 const port = SERVER_PORT || 4333
 app.listen(port, console.log('The server is running on port', port))
+
+async function mail(req) {
+  let transporter = await nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: `${GMAIL_USER}`,
+      pass: `${GMAIL_PASSWORD}`
+    }
+  })
+
+  const output = `
+  <h2>Somebody is reaching out to you Mom</h2>
+  <h3>Contact Details</h3>
+  <p>Name: ${req.body.name}</p>
+  <p>Email: ${req.body.from}</p>
+  <h3>Message</h3>
+  <p> ${req.body.message}</p>
+  `
+
+  const mailOptions = {
+    from: `${GMAIL_USER}`,
+    to: `${GMAIL_USER}`,
+    subject: `Contact`,
+    text: ``,
+    html: output
+  }
+
+  transporter.sendMail(mailOptions, (err) => {
+    if (err) {
+      console.log('Error in mail:', err)
+    }
+  })
+}
+
+app.post('/send-email', (req) => {
+  mail(req)
+})
 
 app.get('/sitemap.xml', function(req, res) {
   sitemap.toXML( function (err, xml) {
