@@ -1,11 +1,11 @@
+@import './../../variables';
+
 #user-navbar-tabs {
-    display: flex;
-    align-items: center;
+    @include default-full-width;
     justify-content: flex-end;
-    width: 100%;
-    padding: 8px;
+    margin: 8px;
     
-    img {
+    .user-navbar-image-button {
         width: 32px;
     }
 
@@ -14,17 +14,10 @@
     }
 
     .user-navbar-cart-icon {
-        margin-left: 8px;
-    }
-
-    .user-navbar-words {
-        font-size: 16px;
-        padding: 4px 8px;
+        margin: 0 16px;
     }
 
     button {
-        background-color: #84B3FF;
-        border-radius: 8px;
-        border: 1px solid rgb(107, 159, 243)
+        @include default-rounded-button;
     }
 }

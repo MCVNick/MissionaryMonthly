@@ -5,15 +5,15 @@ import './RouteNavbar.scss'
 
 const RouteNavbar = (props) => {
     return (
-        <div id='route-navbar-tabs'>
+        <nav id='route-navbar-tabs'>
             {
                 props.tabs.map((tab, index) => {
                     const link = tab.split('').filter((letter) => letter !== ' ').join('')
 
-                    return <Link to={link} key={`${tab}+${index}`}><p>{tab}</p></Link>
+                    return <Link to={link} key={`${tab}+${index}`}><p className='route-navbar-tab'>{tab}</p></Link>
                 })
             }
-        </div>
+        </nav>
     )
 }
 

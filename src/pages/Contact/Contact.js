@@ -29,7 +29,7 @@ const Contact = () => {
 
     return (
         <main id='contact-page'>
-            <section>
+            <section className='contact-section'>
                 <h1 className='contact-header'>Contact</h1>
 
                 <h1>Olea Chidester</h1>
@@ -37,7 +37,7 @@ const Contact = () => {
                 <h1 className='contact-section-divide'>—</h1>
                 <h1>(385) 282-3858</h1>
             </section>
-            <form onSubmit={event => handleSubmit(event, buttonRef)}>
+            <form className='contact-form' onSubmit={event => handleSubmit(event, buttonRef)}>
                 <input placeholder='Email' />
                 <input placeholder='Name' />
                 <textarea placeholder='Message' />

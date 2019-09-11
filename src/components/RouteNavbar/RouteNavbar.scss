@@ -1,12 +1,11 @@
+@import './../../variables';
+
 #route-navbar-tabs {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    @include default-full-width;
+    border-bottom: $border-break;
     margin-bottom: 16px;
-    border-bottom: 1px solid black;
     
-    p {
+    .route-navbar-tab {
         font-size: 20px;
         padding: 16px;
     }

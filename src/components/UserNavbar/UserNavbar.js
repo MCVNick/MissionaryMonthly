@@ -14,23 +14,24 @@ const UserNavbar = (props) => {
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
     return (
-        <div id='user-navbar-tabs'>
-            <a href="https://www.facebook.com/MissionaryMonthly"><img src={facebookIcon} alt='Facebook' className='user-navbar-social-button-last' /></a>
+        <nav id='user-navbar-tabs'>
+            <a href='https://www.facebook.com/MissionaryMonthly'>
+                <img src={facebookIcon} alt='Facebook' className='user-navbar-image-button user-navbar-social-button-last' />
+            </a>
             {/* <a href="https://www.facebook.com/MissionaryMonthly"><img src={pintristIcon} alt='Pintrist'/></a> */}
             {/* <a href="https://www.facebook.com/MissionaryMonthly"><img src={instagramIcon} alt='Instagram'/></a> */}
             {
                 !isAuthenticated && (
                     <button
-                        className='user-navbar-words'
                         onClick={() => loginWithRedirect({})
                         }>
                         Login
                     </button>
                 )
             }
-            {isAuthenticated && <button className='user-navbar-words' onClick={() => logout()}>Logout</button>}
-            <Link to='Cart'><img src={cart} alt='Cart' className='user-navbar-cart-icon' /></Link>
-        </div>
+            {isAuthenticated && <button onClick={() => logout()}>Logout</button>}
+            <Link to='Cart'><img src={cart} alt='Cart' className='user-navbar-image-button user-navbar-cart-icon' /></Link>
+        </nav>
     )
 }
 

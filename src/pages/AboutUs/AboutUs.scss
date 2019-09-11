@@ -1,0 +1,14 @@
+@import './../../variables';
+
+#about-us-page {
+    @include default-part-width;
+    text-align: left;
+
+    .about-us-paragraph {
+        @include default-paragraph;
+    }
+
+    p:first-child {
+        margin: 0 0 8px 0;
+    }
+}

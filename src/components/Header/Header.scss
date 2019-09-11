@@ -1,8 +1,9 @@
+@import './../../variables';
+
 #page-header {
-    width: 85%;
-    padding: 96px;
-    font-size: 48px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    @include default-part-width;
     background-image: url('./../../assets/images/picture.png');
+    font-family: $logo-font;
+    font-size: 48px;
+    padding: 96px;
 }

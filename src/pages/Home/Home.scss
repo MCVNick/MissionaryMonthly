@@ -1,9 +1,7 @@
+@import './../../variables';
+
 #home-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 85%;
+    @include default-part-width;
 
     > .home-carousel {
         display: flex;
