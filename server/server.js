@@ -20,8 +20,6 @@ const sitemap = sm.createSitemap ({
     { url: '/About Us',  changefreq: 'daily', priority: 0.6 },
     { url: '/Contact',  changefreq: 'daily', priority: 0.8 },
     { url: '/More',  changefreq: 'daily', priority: 0.7 },
-    { url: '/Login',  changefreq: 'daily', priority: 0.6 },
-    { url: '/Register',  changefreq: 'daily', priority: 0.7 }
   ]
 });
 app.use(express.static(`${__dirname}/../build`));
@@ -78,6 +76,10 @@ async function mail(req) {
 
 app.post('/send-email', (req) => {
   mail(req)
+})
+
+app.get('/missionarymonthly/admin/logo', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/favicon.ico'))
 })
 
 app.get('/sitemap.xml', function(req, res) {

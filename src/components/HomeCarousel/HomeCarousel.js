@@ -2,7 +2,7 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
-import One from './../../assets/images/One.png'
+import One from './../../assets/images/HomeCarousel/One.png'
 import Two from './../../assets/images/HomeCarousel/Two.png'
 import Three from './../../assets/images/HomeCarousel/Three.png'
 import Four from './../../assets/images/HomeCarousel/Four.png'
@@ -17,7 +17,7 @@ const HomeCarousel = () => {
           selectedItem={2}
           useKeyboardArrows={true}
           autoPlay={true}
-          interval='3000'>
+          interval={3000}>
             <div>
                 <img src={One} alt=""/>
             </div>
