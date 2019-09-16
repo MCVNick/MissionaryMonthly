@@ -2,13 +2,28 @@
 
 #page-header {
     @include default-part-width;
-    width: 25%;
-    background-image: url('./../../assets/images/Logo/logo-white-box.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 280px;
     background-color: $default-cobalt;
     font-family: $logo-font;
-    font-size: 48px;
-    padding: 96px;
+    color: $logo-color;
+    text-transform: uppercase;
+    padding: 48px;
+    
+    h1 {
+        font-size: 48px;
+        margin-bottom: 32px;
+    }
+
+    h2 {
+        font-size: 48px;
+        margin: 8px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+    }
 }
