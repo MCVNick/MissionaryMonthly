@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import { Auth0Provider } from './components/Auth0/react-auth0-wrapper'
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import RouteNavbar from './components/RouteNavbar/RouteNavbar'
 import UserNavbar from './components/UserNavbar/UserNavbar'
 import routes from './routes';
@@ -46,6 +47,7 @@ function App() {
             {routes}
           </div>
         </Router>
+        <Footer />
       </Auth0Provider>
     </div>
   );

@@ -2,10 +2,7 @@ import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
 import { useAuth0 } from '../Auth0/react-auth0-wrapper'
-
-import facebookIcon from './../../assets/icons/facebook.png'
-import pintristIcon from './../../assets/icons/pintrist.png'
-import instagramIcon from './../../assets/icons/instagram.png'
+import SocialButtons from '../SocialButtons/SocialButtons'
 
 import './UserNavbar.scss'
 
@@ -14,9 +11,7 @@ const UserNavbar = (props) => {
 
     return (
         <nav id='user-navbar-tabs'>
-            <a href='https://www.facebook.com/MissionaryMonthly'><img src={facebookIcon} alt='Facebook' className='user-navbar-image-button' /></a>
-            <a href="https://www.pinterest.com/oleachidester/"><img src={pintristIcon} alt='Pintrist' className='user-navbar-image-button'/></a>
-            <a href="https://www.instagram.com/MissionaryMonthly"><img src={instagramIcon} alt='Instagram' className='user-navbar-image-button'/></a>
+            <SocialButtons />
             <h3>|</h3>
             {
                 !isAuthenticated && (

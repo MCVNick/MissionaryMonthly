@@ -14,19 +14,6 @@
             margin: 0 16px;
         }
     }
-    
-    .user-navbar-image-button {
-        width: 24px;
-        margin: 0 4px;
-    }
-
-    .user-navbar-cart-icon {
-        margin: 0 16px;
-    }
-
-    button {
-        @include default-rounded-button;
-    }
 
     h1 {
         @include font-bold;
