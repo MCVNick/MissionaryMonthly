@@ -1,15 +1,16 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import './Header.scss'
 
-const Header = (props) => {
+const Header = () => {
     return (
-        <div id='page-header'>
+        <Link to='/home' id='page-header'>
             <h1>Missionary Monthly</h1>
             <h3>Helping you send </h3>
             <h2>Love monthly</h2>
             <h3>With themed boxes</h3>
-        </div>
+        </Link>
     )
 }
 

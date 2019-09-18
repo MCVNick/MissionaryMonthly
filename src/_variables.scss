@@ -4,6 +4,15 @@ $border-break: 1px solid #CCC;
 $logo-color: #FFFFFF;
 $logo-font: 'Times New Roman', Times, serif;
 
+%hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+@mixin hover {
+    @extend %hover;
+}
+
 %font {
     font-family: 'Manjari', sans-serif;
     font-weight: 400;

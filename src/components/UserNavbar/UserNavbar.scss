@@ -21,19 +21,23 @@
         font-size: 14px;
     }
 
-    h2 {
+    h1:hover {
+        @include hover;
+    }
+
+    div > h2 {
         @include font;
         margin: 0 4px;
         font-size: 14px;
     }
 
-    h3 {
+    > h3 {
         @include font-light;
         font-size: 32px;
         margin: 0 8px;
     }
 
-    .sign-in-register {
+    > .sign-in-register {
         display: flex;
         align-items: center;
         text-align: center;

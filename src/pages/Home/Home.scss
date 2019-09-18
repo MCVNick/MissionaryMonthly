@@ -3,11 +3,14 @@
 #home-page {
     @include default-part-width;
 
+    > h1 {
+        @include font-bold;
+    }
+
     > section {
         width: 100%;
 
         > div {
-            
             img {
                 width:100%;
             }
