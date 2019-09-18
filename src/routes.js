@@ -10,14 +10,14 @@ const Cart = lazy(() => import('./pages/Cart/Cart'))
 
 export default (
     <Switch>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<main>Loading...</main>}>
             <Route exact path='/' component={Home}/>
-            <Route path='/Home' component={Home}/>
-            <Route path='/Shop' component={Shop}/>
-            <Route path='/AboutUs' component={AboutUs}/>
-            <Route path='/Contact' component={Contact}/>
-            <Route path='/More' component={More}/>
-            <Route path='/Cart' component={Cart}/>
+            <Route path='/home' component={Home}/>
+            <Route path='/shop' component={Shop}/>
+            <Route path='/about-us' component={AboutUs}/>
+            <Route path='/contact' component={Contact}/>
+            <Route path='/more' component={More}/>
+            <Route path='/cart' component={Cart}/>
         </Suspense>
     </Switch>
 )

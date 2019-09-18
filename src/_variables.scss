@@ -2,10 +2,12 @@ $default-cobalt: #84B3FF;
 $cobalt: #66A0FF;
 $border-break: 1px solid #CCC;
 $logo-color: #FFFFFF;
+$text-color: #383838;
+
 $logo-font: 'Times New Roman', Times, serif;
 
 %hover {
-    opacity: .6;
+    color: $cobalt;
     cursor: pointer;
 }
 

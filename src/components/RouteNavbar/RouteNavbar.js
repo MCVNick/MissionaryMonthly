@@ -8,7 +8,7 @@ const RouteNavbar = (props) => {
         <nav id='route-navbar-tabs'>
             {
                 props.tabs.map((tab, index) => {
-                    const link = tab.split('').filter((letter) => letter !== ' ').join('')
+                    const link = tab.split('').map((letter) => letter === ' ' ? '-' : letter).join('').toLowerCase()
 
                     return <Link to={link} key={`${tab}+${index}`}><p className='route-navbar-tab'>{tab}</p></Link>
                 })

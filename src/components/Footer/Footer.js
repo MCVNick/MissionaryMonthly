@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import SocialButtons from '../SocialButtons/SocialButtons'
 
@@ -13,21 +14,21 @@ const Footer = () => {
                 <section>
                     <article>
                         <h1>Navigate</h1>
-                        <h2>Home</h2>
-                        <h2>Shop</h2>
-                        <h2>About Us</h2>
-                        <h2>Contact</h2>
-                        <h2>More</h2>
+                        <Link to='/home'><h2>Home</h2></Link>
+                        <Link to='/shop'><h2>Shop</h2></Link>
+                        <Link to='/about-us'><h2>About Us</h2></Link>
+                        <Link to='/contact'><h2>Contact</h2></Link>
+                        <Link to='/more'><h2>More</h2></Link>
                     </article>
-                    <article>
+                    {/* <article>
                         <h1>Categories</h1>
                         <h2>Hollidays</h2>
                         <h2>Seasons</h2>
                         <h2>Everyday</h2>
                         <h2>Celebrate</h2>
-                    </article>
+                    </article> */}
                     <article>
-                        <h1>Info</h1>
+                        <h1>Contact Info</h1>
                         <h2>missionarymonthly@gmail.com</h2>
                         <h2>(385) 282-3858</h2>
                     </article>

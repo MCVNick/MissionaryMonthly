@@ -45,9 +45,9 @@ function App() {
             <Header name={name}/>
             <RouteNavbar tabs={tabs}/>
             {routes}
+            <Footer />
           </div>
         </Router>
-        <Footer />
       </Auth0Provider>
     </div>
   );
