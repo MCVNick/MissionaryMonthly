@@ -3,16 +3,14 @@
 #home-page {
     @include default-part-width;
 
-    > .home-carousel {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 450px;
-    }
+    > section {
+        width: 100%;
 
-    .carousel {
-        display: flex;
-        justify-content: center;
-
+        > div {
+            
+            img {
+                width:100%;
+            }
+        }
     }
 }

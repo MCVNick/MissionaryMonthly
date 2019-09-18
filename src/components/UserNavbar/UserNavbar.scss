@@ -3,14 +3,21 @@
 #user-navbar-tabs {
     @include default-full-width;
     justify-content: flex-end;
+    height: 32px;
     margin: 8px;
+
+    > a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        > h1 {
+            margin: 0 16px;
+        }
+    }
     
     .user-navbar-image-button {
-        width: 32px;
-    }
-
-    .user-navbar-social-button-last {
-        margin-right: 16px;
+        width: 24px;
+        margin: 0 4px;
     }
 
     .user-navbar-cart-icon {
@@ -19,5 +26,30 @@
 
     button {
         @include default-rounded-button;
+    }
+
+    h1 {
+        @include font-bold;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    h2 {
+        @include font;
+        margin: 0 4px;
+        font-size: 14px;
+    }
+
+    h3 {
+        @include font-light;
+        font-size: 32px;
+        margin: 0 8px;
+    }
+
+    .sign-in-register {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: 32px;
     }
 }

@@ -1,47 +1,40 @@
 import React from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import Slider from 'react-slick';
+import Item from './../HomeCarouselItem/HomeCarouselItem'
 
-import necessities from './../../assets/images/Products/necessities-side.jpg'
-import cinnamon from './../../assets/images/Products/cinnamon-side.jpg'
-import irish from './../../assets/images/Products/irish-side.jpg'
-import bunny from './../../assets/images/Products/bunny-side.jpg'
-import fiesta from './../../assets/images/Products/fiesta-side.jpg'
-import water from './../../assets/images/Products/water-side.jpg'
-import fourth from './../../assets/images/Products/fourth-side.jpg'
-import melon from './../../assets/images/Products/melon-side.jpg'
-import bee from './../../assets/images/Products/bee-side.jpg'
-import trick from './../../assets/images/Products/trick-side.jpg'
-import pumpkin from './../../assets/images/Products/pumpkin-side.jpg'
-import claus from './../../assets/images/Products/claus-side.jpg'
-import pink from './../../assets/images/Products/pink-side.jpg'
-import birthday from './../../assets/images/Products/birthday-side.jpg'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./HomeCarousel.scss"
 
 const HomeCarousel = () => {
+    let settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    }
     return(
-        <Carousel 
-          className='home-carousel'
-          showStatus={false}
-          infiniteLoop={true}
-          selectedItem={0}
-          useKeyboardArrows={true}
-          autoPlay={true}
-          interval={3000}>
-            <div><img src={necessities} alt=""/></div>
-            <div><img src={cinnamon} alt=""/></div>
-            <div><img src={irish} alt=""/></div>
-            <div><img src={bunny} alt=""/></div>
-            <div><img src={fiesta} alt=""/></div>
-            <div><img src={water} alt=""/></div>
-            <div><img src={fourth} alt=""/></div>
-            <div><img src={melon} alt=""/></div>
-            <div><img src={bee} alt=""/></div>
-            <div><img src={trick} alt=""/></div>
-            <div><img src={pumpkin} alt=""/></div>
-            <div><img src={claus} alt=""/></div>
-            <div><img src={pink} alt=""/></div>
-            <div><img src={birthday} alt=""/></div>
-        </Carousel>
+        <section id='home-carousel'>
+            <Slider {...settings}>
+                <Item name="necessities-side" />
+                <Item name="cinnamon-side" />
+                <Item name="irish-side" />
+                <Item name="bunny-side" />
+                <Item name="fiesta-side" />
+                <Item name="water-side" />
+                <Item name="fourth-side" />
+                <Item name="melon-side" />
+                <Item name="bee-side" />
+                <Item name="trick-side" />
+                <Item name="pumpkin-side" />
+                <Item name="claus-side" />
+                <Item name="birthday-side" />
+                <Item name="pink-side" />
+            </Slider>
+        </section>
     )
 }
 

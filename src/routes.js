@@ -7,8 +7,6 @@ const AboutUs = lazy(() => import('./pages/AboutUs/AboutUs'))
 const Contact = lazy(() => import('./pages/Contact/Contact'))
 const More = lazy(() => import('./pages/More/More'))
 const Cart = lazy(() => import('./pages/Cart/Cart'))
-const Register = lazy(() => import('./pages/Register/Register'))
-const Login = lazy(() => import('./pages/Login/Login'))
 
 export default (
     <Switch>
@@ -20,8 +18,6 @@ export default (
             <Route path='/Contact' component={Contact}/>
             <Route path='/More' component={More}/>
             <Route path='/Cart' component={Cart}/>
-            <Route path='/Register' component={Register}/>
-            <Route path='/Login' component={Login}/>
         </Suspense>
     </Switch>
 )

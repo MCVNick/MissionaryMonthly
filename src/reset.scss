@@ -20,7 +20,7 @@ margin: 0;
 padding: 0;
 border: 0;
 font-size: 100%;
-font-family: 'Montserrat', sans-serif; /* changed */
+font-family: 'Manjari'; /* changed */
 font-weight: 400; /* changed */
 vertical-align: baseline;
 box-sizing: border-box; /* added */
@@ -54,10 +54,26 @@ border-spacing: 0;
 // Added this which is going to show a specific font when certain conditions are met
 // Font-display allows us to have another font appear while the other one loads
 @font-face {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Manjari';
     font-style: normal;
     font-weight: 400;
-    src: local('Montserrat'),
-    url('../src/assets/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+    src: local('Manjari'),
+    url('./assets/fonts/Manjari/Manjari-Regular.ttf') format('truetype');
     font-display: auto;
-  }
+}
+@font-face {
+  font-family: 'Manjari';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Manjari'),
+  url('./assets/fonts/Manjari/Manjari-Bold.ttf') format('truetype');
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Manjari';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Manjari'),
+  url('./assets/fonts/Manjari/Manjari-Thin.ttf') format('truetype');
+  font-display: auto;
+}

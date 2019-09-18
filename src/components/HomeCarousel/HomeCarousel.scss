@@ -1,0 +1,11 @@
+@import './../../variables';
+
+#home-carousel {
+    > div > div > div > div{
+        padding: 16px;
+    }
+
+    .carousel-item-header {
+        margin-top: 16px;
+    }
+}
