@@ -14,7 +14,7 @@ const HomeCarousel = () => {
         slidesToShow: 3,
         slidesToScroll: 3,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 5000,
     }
     return(
         <section id='home-carousel'>

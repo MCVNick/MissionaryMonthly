@@ -1,0 +1,30 @@
+@import './../../variables';
+
+#product-page {
+    @include default-part-width;
+
+    > .product-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    > article > a > h1, > article > h1 {
+        @include font;
+        margin: 0 4px;
+    }
+
+    > article > a > h1:hover {
+        @include hover;
+    }
+
+    > section {
+        width: 50%;
+
+        > section > div {
+            img {
+                width:100%;
+            }
+        }
+    }
+}

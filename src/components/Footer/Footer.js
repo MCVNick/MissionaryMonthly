@@ -14,7 +14,7 @@ const Footer = () => {
                 <section>
                     <article>
                         <h1>Navigate</h1>
-                        <Link to='/home'><h2>Home</h2></Link>
+                        <Link to='/'><h2>Home</h2></Link>
                         <Link to='/shop'><h2>Shop</h2></Link>
                         <Link to='/about-us'><h2>About Us</h2></Link>
                         <Link to='/contact'><h2>Contact</h2></Link>

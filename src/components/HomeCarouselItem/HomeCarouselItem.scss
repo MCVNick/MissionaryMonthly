@@ -1,5 +1,28 @@
 @import './../../variables';
 
 .home-carousel-item {
-    
+    > div > article {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(50% - 25px);
+        left: calc(50% - 56px);
+
+        > button {
+            @include default-button;
+            border-radius: 8px;
+            margin-bottom: 4px;
+            height: 24px;
+            opacity: 0;
+        }
+    }
+
+    > div:hover {
+        > article > button {
+            opacity: .9;
+        }
+        > article > button:hover {
+            opacity: 1;
+        }
+    }
 }

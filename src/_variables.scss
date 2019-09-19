@@ -3,6 +3,8 @@ $cobalt: #66A0FF;
 $border-break: 1px solid #CCC;
 $logo-color: #FFFFFF;
 $text-color: #383838;
+$button-color: rgb(233, 233, 233);
+$button-border-color: rgb(189, 189, 189);
 
 $logo-font: 'Times New Roman', Times, serif;
 
@@ -35,8 +37,8 @@ $logo-font: 'Times New Roman', Times, serif;
 }
 
 %default-button {
-    background-color: $default-cobalt;
-    border: 1px solid $cobalt;
+    background-color: $button-color;
+    border: 1px solid $button-border-color;
     font-size: 14px;
     padding: 2px 10px;
 }

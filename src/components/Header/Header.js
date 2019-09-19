@@ -5,7 +5,7 @@ import './Header.scss'
 
 const Header = () => {
     return (
-        <Link to='/home' id='page-header'>
+        <Link to='/' id='page-header'>
             <h1>Missionary Monthly</h1>
             <h3>Helping you send </h3>
             <h2>Love monthly</h2>
